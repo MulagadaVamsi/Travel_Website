@@ -1,0 +1,20 @@
+<%layout("./layouts/boilerplate")%>
+<body>
+    <img src="<%=listings_info.image%> "style="height:20rem ;width: 20rem;">
+    <ul>
+        <div>
+            <h1><%=listings_info.title%></h1>
+            <li><h2>Price : &#8377;<%=listings_info.price.toLocaleString("en-in")%></h2></li>
+            <li><h2>Description : <%=listings_info.description%></h2></li>
+            <li><h2>location : <%=listings_info.location%></h2></li>
+            <li><h2>Country : <%=listings_info.country%></h2></li>
+            <form method="get" action="/listings/<%=listings_info.id%>/edit">
+                <button>Edit</button>
+            </form>
+            <form method="post" action="/listings/<%=listings_info.id%>?_method=DELETE">
+                <button>Delete</button>
+            </form>
+            <br>
+        </div>
+    </ul>
+</body>
