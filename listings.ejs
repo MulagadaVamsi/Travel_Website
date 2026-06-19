@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All the locations</title>
+</head>
+<body>
+    <h2>All the listings</h2>
+    <form method="get" action="/listings/new_entry">
+        <button>Create New listings</button>
+    </form>
+    <ul>
+    <%for(let lists of listings){%>
+        <li>
+        <div>
+            <a href="/listings/<%=lists.id%>/show">
+                <h3><%=lists.title%></h3>
+            </a>
+            <form method="get" action="/listings/<%=lists.id%>/edit">
+                 <button>Edit</button>
+            </form>
+            <br>
+            <form method="post" action="/listings/<%=lists.id%>?_method=DELETE">
+                <button>Delete</button>
+            </form>
+        </div>
+        </li>
+    <%}%>
+    </ul>
+</body>
+</html>

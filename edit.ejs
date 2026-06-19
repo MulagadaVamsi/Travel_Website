@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editing</title>
+</head>
+<body>
+    <h1>Edit Operation for <%=listings.title%></h1>
+    <form method="post" action="/listings/<%=listings.id%>?_method=PATCH"><br><br>
+        <input placeholder="<%=listings.price%>" name="price"><br><br>
+        <textarea placeholder="<%=listings.description%>" name="description"></textarea><br><br>
+        <input placeholder="<%=listings.location%>" name="location"><br><br>
+        <input placeholder="<%=listings.country%>" name="country"><br><br>
+        <button>EDIT</button>
+    </form>
+</body>
+</html><br><br>
