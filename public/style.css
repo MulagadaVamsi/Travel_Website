@@ -115,4 +115,18 @@ footer{
 .card-img-top:hover{
     transform: translateY(-3px) scale(1.001);
 }
+/*to make the footer grounded to each and every page*/
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container{
+    flex:1;
+}
+
+.btns{
+    display: flex;
+    
+}
 
